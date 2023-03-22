@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-1: rgb(0, 85, 255);
+    --color-2: rgb(0, 200, 255);
+    --color-3: rgb(255, 0, 144);
+    --body-bg-color: #f4f3f3;
+    --white-color: #fff;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-bg-color);
+}
+
+.container .iconsBx{
+    display: flex;
+    gap: 5rem;
+}
+
+.container .iconsBx .iconBx{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container .iconsBx .iconBx:hover{
+    background-color: var(--white-color);
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.05), -12px -12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.container .iconsBx .iconBx a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.container .iconsBx .iconBx:nth-child(1):hover i{
+    color: var(--color-1); 
+}
+
+.container .iconsBx .iconBx:nth-child(2):hover i{
+    color: var(--color-2);
+}
+
+.container .iconsBx .iconBx:nth-child(3):hover i{
+    color: var(--color-3);
+}
+
+i{
+    font-size: 3.5rem;
+}
+
+.tooltip{
+    position: absolute;
+    background:var(--white-color);
+    padding: 2rem;
+    border-radius: 3.2rem;
+    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.tooltip::before{
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: var(--white-color);
+
+}
